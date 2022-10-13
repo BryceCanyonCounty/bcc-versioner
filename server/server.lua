@@ -24,15 +24,18 @@ Versioner.checkRelease = function (resourcename, repo)
             uptodate = true
         end
 
+        print('^0[0]^1[1]^2[2]^3[3]^4[4]^5[5]^6[6]^7[7]^8[8]^9[9]')
+
+
         if uptodate then
-            print('^2✅Up to Date! (Current Version '..current.version..')^0')
+            print('^2✅Up to Date! ^5['..resourcename..'] ^6(Current Version '..current.version..')^0')
         elseif overdate then
-            print('^3⚠️Unsupported! (Version '..current.version..')^0')
+            print('^3⚠️Unsupported! ^5['..resourcename..'] ^6(Version '..current.version..')^0')
             print('^4Current Version ^2('..latest.version..') ^3<'..latest.url..'>^0')
         else
-            print('^1❌Outdated! (Version '..current.version..')^0')
-            print('^4New Version ^2('..latest.version..') ^3<'..latest.url..'>^0')
-            print('^4Changelog - ^0\r\n'..latest.body)
+            print('^1❌Outdated! ^5['..resourcename..'] ^6(Version '..current.version..')^0')
+            print('^4NEW VERSION ^2('..latest.version..') ^3<'..latest.url..'>^0')
+            print('^4CHANGELOG ^0\r\n'..latest.body)
         end
     end, 'GET', json.encode(payload), {
         ['Content-Type'] = 'application/json'
@@ -64,16 +67,16 @@ Versioner.checkFile = function (resourcename, repo)
         end
 
         if uptodate then
-            print('^2✅Up to Date! (Current Version '..current.version..')^0')
+            print('^2✅Up to Date! ^5['..resourcename..'] ^6(Current Version '..current.version..')^0')
         elseif overdate then
-            print('^3⚠️Unsupported! (Version '..current.version..')^0')
+            print('^3⚠️Unsupported! ^5['..resourcename..'] ^6(Version '..current.version..')^0')
             print('^4Current Version ^2('..latest.version..') ^3<'..latest.url..'>^0')
         else
-            print('^1❌Outdated! (Version '..current.version..')^0')
-            print('^4New Version ^2('..latest.version..') ^3<'..latest.url..'>^0')
+            print('^1❌Outdated! ^5['..resourcename..'] ^6(Version '..current.version..')^0')
+            print('^4NEW VERSION ^2('..latest.version..') ^3<'..latest.url..'>^0')
 
             local cl = latest.body:gsub("<"..current.version..">.*", "")
-            print('^4Changelog - ^0\r\n'..cl)
+            print('^CHANGELOG ^0\r\n'..cl)
         end
     end, 'GET', json.encode(payload), {
         ['Content-Type'] = 'application/json'
