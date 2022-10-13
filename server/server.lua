@@ -24,9 +24,6 @@ Versioner.checkRelease = function (resourcename, repo)
             uptodate = true
         end
 
-        print('^0[0]^1[1]^2[2]^3[3]^4[4]^5[5]^6[6]^7[7]^8[8]^9[9]')
-
-
         if uptodate then
             print('^2✅Up to Date! ^5['..resourcename..'] ^6(Current Version '..current.version..')^0')
         elseif overdate then
