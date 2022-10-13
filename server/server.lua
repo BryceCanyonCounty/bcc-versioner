@@ -80,6 +80,6 @@ Versioner.checkFile = function (resourcename, repo)
     })
 end
 
-exports('versioner',function()
+exports('initiate',function()
     return Versioner
 end)
