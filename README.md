@@ -31,7 +31,7 @@ _Wrong: `v1.1.0`_
 > Add the following contents to your lua server
 ```lua
 local versioner = exports['bcc-versioner'].initiate()
-local repo = 'https://github.com/VORPCORE/vorp_inventory-lua
+local repo = 'https://github.com/BryceCanyonCounty/bcc-anticheat'
 versioner.checkRelease(GetCurrentResourceName(), repo)
 ```
 
@@ -50,7 +50,7 @@ versioner.checkRelease(GetCurrentResourceName(), repo)
 > Add the following contents to your lua server
 ```lua
 local versioner = exports['bcc-versioner'].initiate()
-local repo = 'https://github.com/VORPCORE/
+local repo = 'https://github.com/BryceCanyonCounty/bcc-anticheat'
 versioner.checkFile(GetCurrentResourceName(), repo)
 ```
 
