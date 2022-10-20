@@ -18,6 +18,11 @@
 
 This API will allow you to add a version check to your resource.
 
+The script will check what current version of the script is downloaded via the Version defined in the fxmanifest. 
+
+For Example
+`version '1.0'`
+
 #### Release(Tag) Based Checks
 
 _How to use [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)_
