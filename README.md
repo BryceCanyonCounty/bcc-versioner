@@ -1,5 +1,8 @@
-# BCC Anti Cheat
-> A RedM standalone Github Version Checker API for your scripts!
+# BCC Versioner
+> A RedM standalone Github Version Checker API for your custom scripts!
+
+Topics
+github fivem cfx redm vorp
 
 ## Features
 - Resource Version Check export APIs
